@@ -1,0 +1,26 @@
+version: '3'
+services:
+  apache:
+    image: bitnami/apache:2.4
+    links:
+      - node-backend0
+      - node-backend1
+      - node-backend2
+      - node-backend3
+    ports:
+      - 8080:8080
+    volumes:
+      - ./apache/my_vhost.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf
+      - ./apache/httpd-worker.conf:/opt/bitnami/apache/conf/httpd.conf
+  node-backend0: # we don't use docker-compose scale here, because we want to test apache/nginx load balancing
+    build:
+      context: ./node-backend
+  node-backend1:
+    build:
+      context: ./node-backend
+  node-backend2:
+    build:
+      context: ./node-backend
+  node-backend3:
+    build:
+      context: ./node-backend

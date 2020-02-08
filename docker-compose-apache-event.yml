@@ -11,7 +11,7 @@ services:
       - 8080:8080
     volumes:
       - ./apache/my_vhost.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf
-      - ./apache/httpd.conf:/opt/bitnami/apache/conf/httpd.conf
+      - ./apache/httpd-event.conf:/opt/bitnami/apache/conf/httpd.conf
   node-backend0: # we don't use docker-compose scale here, because we want to test apache/nginx load balancing
     build:
       context: ./node-backend
