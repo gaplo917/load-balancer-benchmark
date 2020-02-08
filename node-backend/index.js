@@ -5,7 +5,7 @@ app.get('/', function (req, res) {
     res.send('ok')
 })
 
-app.get('/:io', function (req, res) {
+app.get('/io/:io', function (req, res) {
     setTimeout(() => res.send('ok'), req.params.io)
 })
 
