@@ -12,6 +12,7 @@ services:
     volumes:
       - ./apache/my_vhost.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf
       - ./apache/httpd-worker.conf:/opt/bitnami/apache/conf/httpd.conf
+      - ./apache/httpd-prefork.conf:/opt/bitnami/apache/conf/extra/httpd-mpm.conf
   node-backend0: # we don't use docker-compose scale here, because we want to test apache/nginx load balancing
     build:
       context: ./node-backend
