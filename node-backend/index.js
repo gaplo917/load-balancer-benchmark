@@ -5,16 +5,8 @@ app.get('/', function (req, res) {
     res.send('ok')
 })
 
-app.get('/1000ms', function (req, res) {
-    setTimeout(() => res.send('ok'), 1000)
-})
-
-app.get('/10000ms', function (req, res) {
-    setTimeout(() => res.send('ok'), 10000)
-})
-
-app.get('/60000ms', function (req, res) {
-    setTimeout(() => res.send('ok'), 60000)
+app.get('/:io', function (req, res) {
+    setTimeout(() => res.send('ok'), req.params.io)
 })
 
 console.log('started express...')
