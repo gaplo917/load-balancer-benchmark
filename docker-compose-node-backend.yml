@@ -20,3 +20,63 @@ services:
       context: ./node-backend
     ports:
       - 3003:3000
+  node-backend4:
+    build:
+      context: ./node-backend
+    ports:
+      - 3004:3000
+  node-backend5:
+    build:
+      context: ./node-backend
+    ports:
+      - 3005:3000
+  node-backend6:
+    build:
+      context: ./node-backend
+    ports:
+      - 3006:3000
+  node-backend7:
+    build:
+      context: ./node-backend
+    ports:
+      - 3007:3000
+  node-backend8:
+    build:
+      context: ./node-backend
+    ports:
+      - 3008:3000
+  node-backend9:
+    build:
+      context: ./node-backend
+    ports:
+      - 3009:3000
+  node-backend10:
+    build:
+      context: ./node-backend
+    ports:
+      - 3010:3000
+  node-backend11:
+    build:
+      context: ./node-backend
+    ports:
+      - 3011:3000
+  node-backend12:
+    build:
+      context: ./node-backend
+    ports:
+      - 3012:3000
+  node-backend13:
+    build:
+      context: ./node-backend
+    ports:
+      - 3013:3000
+  node-backend14:
+    build:
+      context: ./node-backend
+    ports:
+      - 3014:3000
+  node-backend15:
+    build:
+      context: ./node-backend
+    ports:
+      - 3015:3000
