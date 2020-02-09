@@ -11,4 +11,3 @@ services:
         hard: 40000
     volumes:
       - ./nginx/nginx.conf:/opt/bitnami/nginx/conf/nginx.conf
-      - ./hosts:/etc/hosts:ro

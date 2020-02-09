@@ -13,4 +13,3 @@ services:
       - ./apache/my_vhost.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf
       - ./apache/httpd-event.conf:/opt/bitnami/apache/conf/httpd.conf
       - ./apache/extra/httpd-mpm.conf:/opt/bitnami/apache/conf/extra/httpd-mpm.conf
-      - ./hosts:/etc/hosts:ro
