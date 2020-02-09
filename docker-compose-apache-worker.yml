@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   apache:
+    network_mode: host
     image: bitnami/apache:2.4
     ports:
       - 8080:8080
