@@ -13,7 +13,7 @@ const timeouts = [
 const len = timeouts.length
 let counter = 0
 
-app.get('io', function (req, res) {
+app.get('/io', function (req, res) {
     setTimeout(() => res.send('ok'), timeouts[counter % len - 1])
     counter += 1;
 })
