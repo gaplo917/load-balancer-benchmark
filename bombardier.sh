@@ -15,7 +15,7 @@ for value in "${concurrency[@]}"
 do
   json_result="$2/c$value.json"
   echo "running concurrency = $value";
-  docker run -ti --rm --network=host --ulimit nofile=20000:40000 alpine/bombardier --http2 -o json -p result -c $value -n 300000 -t 60s -l $1 | jq '.' | tee $json_result > /dev/null;
+  docker run -ti --rm --network=host --ulimit nofile=20000:40000 alpine/bombardier --http2 -o json -p result -c $value -n 1000000 -t 60s -l $1 | jq '.' | tee $json_result > /dev/null;
   echo "concurrency=$value, timeTakenSeconds=$(cat $json_result | jq '.result.timeTakenSeconds'), rps=$(cat $json_result | jq '.result.rps.mean')"
   sleep 5;
 done
