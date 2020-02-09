@@ -7,7 +7,7 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 20000
+        soft: 25000
         hard: 40000
     volumes:
       - ./nginx/nginx.conf:/opt/bitnami/nginx/conf/nginx.conf
