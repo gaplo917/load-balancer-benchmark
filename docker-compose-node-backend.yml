@@ -1,0 +1,22 @@
+version: '3'
+services:
+  node-backend0: # we don't use docker-compose scale here, because we want to test real-world apache/nginx load balancing under load
+    build:
+      context: ./node-backend
+    ports:
+      - 3000:3000
+  node-backend1:
+    build:
+      context: ./node-backend
+    ports:
+      - 3001:3000
+  node-backend2:
+    build:
+      context: ./node-backend
+    ports:
+      - 3002:3000
+  node-backend3:
+    build:
+      context: ./node-backend
+    ports:
+      - 3003:3000

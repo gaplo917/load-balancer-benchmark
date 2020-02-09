@@ -5,7 +5,11 @@ app.get('/', function (req, res) {
     res.send('ok')
 })
 
-const timeouts = [20,40,60,80,100,120,140,160,180,200,400,600,800,1000]
+const timeouts = [
+    ...(new Array(110).fill(10).map((it, index) => it * Math.floor(index / 10) + 10)), // generate 10 - 100 ms
+    500, // some requests cache miss
+    1000, // some requests require more io
+]
 const len = timeouts.length
 let counter = 0
 
