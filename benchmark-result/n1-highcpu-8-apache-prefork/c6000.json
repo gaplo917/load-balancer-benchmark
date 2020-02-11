@@ -1,0 +1,70 @@
+{
+  "spec": {
+    "numberOfConnections": 6000,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 8988020,
+    "bytesWritten": 4993509,
+    "timeTakenSeconds": 39.208197874,
+    "req1xx": 0,
+    "req2xx": 33153,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 34691,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 21661
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 12513
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
+        "count": 341
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address (Client.Timeout exceeded while awaiting headers)",
+        "count": 168
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 8
+      }
+    ],
+    "latency": {
+      "mean": 3178963.3481369023,
+      "stddev": 1852667.2900747336,
+      "max": 11209165,
+      "percentiles": {
+        "50": 3038746,
+        "75": 4894132,
+        "90": 5750656,
+        "95": 6188313,
+        "99": 6723980
+      }
+    },
+    "rps": {
+      "mean": 4327.130320931275,
+      "stddev": 4983.664781631079,
+      "max": 28885.785004305788,
+      "percentiles": {
+        "50": 2570.759252,
+        "75": 6551.475667,
+        "90": 10146.326945,
+        "95": 13935.85207,
+        "99": 26019.233697
+      }
+    }
+  }
+}

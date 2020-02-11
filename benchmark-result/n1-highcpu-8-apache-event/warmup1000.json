@@ -1,0 +1,58 @@
+{
+  "spec": {
+    "numberOfConnections": 1000,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 95000923,
+    "bytesWritten": 49548447,
+    "timeTakenSeconds": 30.472989764,
+    "req1xx": 0,
+    "req2xx": 420056,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 3764,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 3552
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 212
+      }
+    ],
+    "latency": {
+      "mean": 70844.1595441461,
+      "stddev": 160533.48619338791,
+      "max": 7348145,
+      "percentiles": {
+        "50": 61256,
+        "75": 91033,
+        "90": 110472,
+        "95": 111406,
+        "99": 500410
+      }
+    },
+    "rps": {
+      "mean": 14115.863527971514,
+      "stddev": 3313.488448164529,
+      "max": 17654.579131384675,
+      "percentiles": {
+        "50": 15355.618621,
+        "75": 15922.45336,
+        "90": 16277.026375,
+        "95": 16461.124428,
+        "99": 16890.08016
+      }
+    }
+  }
+}

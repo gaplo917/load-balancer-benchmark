@@ -1,0 +1,74 @@
+{
+  "spec": {
+    "numberOfConnections": 20000,
+    "testType": "timed",
+    "testDurationSeconds": 180,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 56012326,
+    "bytesWritten": 32038023,
+    "timeTakenSeconds": 208.045709553,
+    "req1xx": 0,
+    "req2xx": 247818,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 4,
+    "others": 214190,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
+        "count": 136210
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 50132
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 24227
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 3614
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 6
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:36173->10.170.0.6:8080: read: connection reset by peer",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 7904225.686252738,
+      "stddev": 6694857.384049777,
+      "max": 40245746,
+      "percentiles": {
+        "50": 6280229,
+        "75": 10132972,
+        "90": 14907363,
+        "95": 30000601,
+        "99": 30305261
+      }
+    },
+    "rps": {
+      "mean": 3925.2194948751744,
+      "stddev": 9709.684706996524,
+      "max": 232883.0926874709,
+      "percentiles": {
+        "50": 1742.302468,
+        "75": 4305.851874,
+        "90": 9003.64528,
+        "95": 13382.846083,
+        "99": 30942.228298
+      }
+    }
+  }
+}
