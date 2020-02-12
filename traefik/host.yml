@@ -10,19 +10,19 @@ http:
     backend:
       loadBalancer:
         servers:
-          - url: backend.c.tiny-projectsss.internal:3000
-          - url: backend.c.tiny-projectsss.internal:3001
-          - url: backend.c.tiny-projectsss.internal:3002
-          - url: backend.c.tiny-projectsss.internal:3003
-          - url: backend.c.tiny-projectsss.internal:3004
-          - url: backend.c.tiny-projectsss.internal:3005
-          - url: backend.c.tiny-projectsss.internal:3006
-          - url: backend.c.tiny-projectsss.internal:3007
-          - url: backend.c.tiny-projectsss.internal:3008
-          - url: backend.c.tiny-projectsss.internal:3009
-          - url: backend.c.tiny-projectsss.internal:3010
-          - url: backend.c.tiny-projectsss.internal:3011
-          - url: backend.c.tiny-projectsss.internal:3012
-          - url: backend.c.tiny-projectsss.internal:3013
-          - url: backend.c.tiny-projectsss.internal:3014
-          - url: backend.c.tiny-projectsss.internal:3015
+          - url: http://backend.c.tiny-projectsss.internal:3000
+          - url: http://backend.c.tiny-projectsss.internal:3001
+          - url: http://backend.c.tiny-projectsss.internal:3002
+          - url: http://backend.c.tiny-projectsss.internal:3003
+          - url: http://backend.c.tiny-projectsss.internal:3004
+          - url: http://backend.c.tiny-projectsss.internal:3005
+          - url: http://backend.c.tiny-projectsss.internal:3006
+          - url: http://backend.c.tiny-projectsss.internal:3007
+          - url: http://backend.c.tiny-projectsss.internal:3008
+          - url: http://backend.c.tiny-projectsss.internal:3009
+          - url: http://backend.c.tiny-projectsss.internal:3010
+          - url: http://backend.c.tiny-projectsss.internal:3011
+          - url: http://backend.c.tiny-projectsss.internal:3012
+          - url: http://backend.c.tiny-projectsss.internal:3013
+          - url: http://backend.c.tiny-projectsss.internal:3014
+          - url: http://backend.c.tiny-projectsss.internal:3015
