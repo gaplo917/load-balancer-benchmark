@@ -7,10 +7,8 @@ concurrency=( "${inputs[@]:3}" )
 for value in "${concurrency[@]}"
 do
   json_result="$2/c$value.json"
-  warmup_result="$2/warmup$value.json"
   echo "running warmup(c=$value)...";
-  docker run -ti --rm --ulimit nofile=65535:65535 alpine/bombardier --http2 -o json -p result -c $value -d 30s -t 30s -l $1 | jq '.' | tee $warmup_result > /dev/null;
-  echo "[warmup]concurrency=$value, timeTakenSeconds=$(cat $warmup_result | jq '.result.timeTakenSeconds'), rps=$(cat $warmup_result | jq '.result.rps.mean')"
+  docker run -ti --rm --ulimit nofile=65535:65535 alpine/bombardier --no-print --http2 -c $value -d 30s -t 30s -l $1;
 
   echo "running benchmark(c=$value)...";
   docker run -ti --rm --ulimit nofile=65535:65535 alpine/bombardier --http2 -o json -p result -c $value -d $3 -t 30s -l $1 | jq '.' | tee $json_result > /dev/null;
