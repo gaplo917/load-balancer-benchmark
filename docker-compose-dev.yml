@@ -7,8 +7,8 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 25000
-        hard: 40000
+        soft: 100000
+        hard: 100000
     volumes:
       - ./traefik/traefik.yml:/etc/traefik/traefik.yml
       - ./traefik/host-dev.yml:/etc/traefik/host.yml
@@ -22,8 +22,8 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 25000
-        hard: 40000
+        soft: 100000
+        hard: 100000
     volumes:
       - ./haproxy:/usr/local/etc/haproxy
       - ./haproxy/haproxy-dev.cfg:/usr/local/etc/haproxy/haproxy.cfg
@@ -37,8 +37,8 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 25000
-        hard: 40000
+        soft: 100000
+        hard: 100000
     volumes:
       - ./nginx/nginx-dev.conf:/opt/bitnami/nginx/conf/nginx.conf
     links:
@@ -51,8 +51,8 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 25000
-        hard: 40000
+        soft: 100000
+        hard: 100000
     volumes:
       - ./apache/my_vhost-dev.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf
       - ./apache/httpd-worker.conf:/opt/bitnami/apache/conf/httpd.conf

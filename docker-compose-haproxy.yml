@@ -8,7 +8,7 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 25000
-        hard: 40000
+        soft: 100000
+        hard: 100000
     volumes:
       - ./haproxy:/usr/local/etc/haproxy
