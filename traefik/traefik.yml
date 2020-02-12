@@ -1,5 +1,5 @@
 ## traefik.yml
-MaxIdleConnsPerHost: 40000
+MaxIdleConnsPerHost: 20000
 
 serversTransport:
   insecureSkipVerify: true
