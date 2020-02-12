@@ -6,9 +6,9 @@ app.get('/', function (req, res) {
 })
 
 const timeouts = [
-    ...(new Array(110).fill(10).map((it, index) => it * Math.floor(index / 10) + 10)), // generate 10 - 100 ms
-    500, // some requests cache miss
-    1000, // some requests require more io
+    ...(new Array(50).fill(200).map((it, index) => it + (index * 10))), // generate 200 - 700 ms
+    2000, // some requests cache miss
+    3000 // some requests require more
 ]
 const len = timeouts.length
 let counter = 0
