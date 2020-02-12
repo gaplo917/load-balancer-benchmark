@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  traefik:
+    network_mode: host
+    image: traefik:2.1.4
+    ports:
+      - 8080:8080
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 25000
+        hard: 40000
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ./traefik/host.yml:/etc/traefik/host.yml

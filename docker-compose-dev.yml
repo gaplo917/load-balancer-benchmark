@@ -1,0 +1,68 @@
+version: '3.7'
+services:
+  traefik:
+    image: traefik:2.1.4
+    ports:
+      - 8080:8080
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 25000
+        hard: 40000
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ./traefik/host-dev.yml:/etc/traefik/host.yml
+    links:
+      - backend0
+      - backend1
+  haproxy:
+    image: haproxy:2.1.2
+    ports:
+      - 8081:8080
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 25000
+        hard: 40000
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+      - ./haproxy/haproxy-dev.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    links:
+      - backend0
+      - backend1
+  nginx:
+    image: bitnami/nginx:1.16.1
+    ports:
+      - 8082:8080
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 25000
+        hard: 40000
+    volumes:
+      - ./nginx/nginx-dev.conf:/opt/bitnami/nginx/conf/nginx.conf
+    links:
+      - backend0
+      - backend1
+  apache:
+    image: bitnami/apache:2.4.41
+    ports:
+      - 8083:8080
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 25000
+        hard: 40000
+    volumes:
+      - ./apache/my_vhost-dev.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf
+      - ./apache/httpd-worker.conf:/opt/bitnami/apache/conf/httpd.conf
+      - ./apache/extra/httpd-mpm.conf:/opt/bitnami/apache/conf/extra/httpd-mpm.conf
+    links:
+      - backend0
+      - backend1
+  backend0:
+    build:
+      context: ./node-backend
+  backend1:
+    build:
+      context: ./node-backend

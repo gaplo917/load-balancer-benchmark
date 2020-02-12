@@ -1,0 +1,14 @@
+http:
+  routers:
+    router0:
+      rule: "PathPrefix(`/`)"
+      entryPoints:
+        - web
+      service: backend
+
+  services:
+    backend:
+      loadBalancer:
+        servers:
+          - url: http://backend0:3000
+          - url: http://backend1:3000
