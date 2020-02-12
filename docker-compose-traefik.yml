@@ -8,8 +8,8 @@ services:
     ulimits:
       nproc: 65535
       nofile:
-        soft: 100000
-        hard: 100000
+        soft: 200000
+        hard: 200000
     volumes:
       - ./traefik/traefik.yml:/etc/traefik/traefik.yml
       - ./traefik/host.yml:/etc/traefik/host.yml
