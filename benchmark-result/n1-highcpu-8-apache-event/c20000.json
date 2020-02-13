@@ -2,132 +2,56 @@
   "spec": {
     "numberOfConnections": 20000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 399379735,
-    "bytesWritten": 211552731,
-    "timeTakenSeconds": 194.308561013,
+    "bytesRead": 535150916,
+    "bytesWritten": 202970124,
+    "timeTakenSeconds": 185.078729041,
     "req1xx": 0,
-    "req2xx": 1766781,
+    "req2xx": 2367215,
     "req3xx": 0,
     "req4xx": 0,
-    "req5xx": 0,
-    "others": 575361,
+    "req5xx": 1,
+    "others": 10522,
     "errors": [
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 369861
+        "description": "dial tcp 10.170.0.6:8080: connect: connection timed out",
+        "count": 10517
       },
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 178726
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
-        "count": 23494
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 3246
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 18
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:50283->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:49308->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:40371->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:41804->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:35383->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:60348->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:36446->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:58233->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:39062->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:37655->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:58802->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:50485->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:53443->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:45219->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:58475->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:34814->10.170.0.6:8080: use of closed network connection",
-        "count": 1
+        "description": "the server closed connection before returning the first response byte. Make sure the server returns 'Connection: close' response header before closing the connection",
+        "count": 5
       }
     ],
     "latency": {
-      "mean": 1541355.5911136046,
-      "stddev": 1596611.8251681027,
-      "max": 31919394,
+      "mean": 1062189.824460054,
+      "stddev": 9215806.960600175,
+      "max": 176490357,
       "percentiles": {
-        "50": 1264443,
-        "75": 2193730,
-        "90": 3278047,
-        "95": 4080338,
-        "99": 6031073
+        "50": 221111,
+        "75": 482291,
+        "90": 641806,
+        "95": 695121,
+        "99": 4048449
       }
     },
     "rps": {
-      "mean": 14561.167167500154,
-      "stddev": 17098.57962303128,
-      "max": 768049.1551459293,
+      "mean": 19802.801147784303,
+      "stddev": 4432.068989074337,
+      "max": 56158.25366403126,
       "percentiles": {
-        "50": 10308.488301,
-        "75": 22678.319552,
-        "90": 34724.797213,
-        "95": 41043.931372,
-        "99": 52439.009025
+        "50": 21566.881476,
+        "75": 22293.570554,
+        "90": 22724.415112,
+        "95": 22963.655423,
+        "99": 23406.333754
       }
     }
   }

@@ -2,72 +2,56 @@
   "spec": {
     "numberOfConnections": 20000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 56012326,
-    "bytesWritten": 32038023,
-    "timeTakenSeconds": 208.045709553,
+    "bytesRead": 438661372,
+    "bytesWritten": 163999584,
+    "timeTakenSeconds": 197.339108266,
     "req1xx": 0,
-    "req2xx": 247818,
+    "req2xx": 1939568,
     "req3xx": 0,
-    "req4xx": 0,
-    "req5xx": 4,
-    "others": 214190,
+    "req4xx": 2,
+    "req5xx": 7,
+    "others": 8929,
     "errors": [
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
-        "count": 136210
+        "description": "dial tcp 10.170.0.6:8080: connect: connection timed out",
+        "count": 8873
       },
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 50132
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 24227
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 3614
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 6
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:36173->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
+        "description": "the server closed connection before returning the first response byte. Make sure the server returns 'Connection: close' response header before closing the connection",
+        "count": 56
       }
     ],
     "latency": {
-      "mean": 7904225.686252738,
-      "stddev": 6694857.384049777,
-      "max": 40245746,
+      "mean": 1372816.9043887984,
+      "stddev": 11049023.47313909,
+      "max": 197219400,
       "percentiles": {
-        "50": 6280229,
-        "75": 10132972,
-        "90": 14907363,
-        "95": 30000601,
-        "99": 30305261
+        "50": 263695,
+        "75": 522261,
+        "90": 681503,
+        "95": 995181,
+        "99": 15002619
       }
     },
     "rps": {
-      "mean": 3925.2194948751744,
-      "stddev": 9709.684706996524,
-      "max": 232883.0926874709,
+      "mean": 16157.572997558525,
+      "stddev": 5094.474154941952,
+      "max": 146918.4549583654,
       "percentiles": {
-        "50": 1742.302468,
-        "75": 4305.851874,
-        "90": 9003.64528,
-        "95": 13382.846083,
-        "99": 30942.228298
+        "50": 17708.999714,
+        "75": 19207.46104,
+        "90": 21058.654054,
+        "95": 21792.585073,
+        "99": 22669.233711
       }
     }
   }

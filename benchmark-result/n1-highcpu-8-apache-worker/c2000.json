@@ -2,56 +2,46 @@
   "spec": {
     "numberOfConnections": 2000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 1107504422,
-    "bytesWritten": 572889330,
-    "timeTakenSeconds": 183.94700507,
+    "bytesRead": 202057097,
+    "bytesWritten": 75044676,
+    "timeTakenSeconds": 121.996571651,
     "req1xx": 0,
-    "req2xx": 4896486,
+    "req2xx": 893389,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 5,
-    "errors": [
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 4
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 1
-      }
-    ],
+    "others": 0,
     "latency": {
-      "mean": 73525.4679685922,
-      "stddev": 169888.378017678,
-      "max": 30000308,
+      "mean": 269218.9778248893,
+      "stddev": 152177.30815034063,
+      "max": 3973800,
       "percentiles": {
-        "50": 70551,
-        "75": 94295,
-        "90": 111474,
-        "95": 121712,
-        "99": 239742
+        "50": 200065,
+        "75": 460115,
+        "90": 601780,
+        "95": 660930,
+        "99": 2000970
       }
     },
     "rps": {
-      "mean": 27215.532177419613,
-      "stddev": 2486.31618906947,
-      "max": 41995.72596395855,
+      "mean": 7431.39032855865,
+      "stddev": 1082.464561826681,
+      "max": 11314.19592162286,
       "percentiles": {
-        "50": 27758.662091,
-        "75": 28459.20513,
-        "90": 29021.719925,
-        "95": 29401.856727,
-        "99": 32330.294685
+        "50": 7499.282694,
+        "75": 7801.594256,
+        "90": 8556.492238,
+        "95": 9355.626474,
+        "99": 10208.514411
       }
     }
   }

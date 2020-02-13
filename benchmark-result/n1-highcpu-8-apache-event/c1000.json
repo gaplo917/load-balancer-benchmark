@@ -2,56 +2,46 @@
   "spec": {
     "numberOfConnections": 1000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 629308974,
-    "bytesWritten": 326273103,
-    "timeTakenSeconds": 180.482650997,
+    "bytesRead": 101493002,
+    "bytesWritten": 37702644,
+    "timeTakenSeconds": 121.995766421,
     "req1xx": 0,
-    "req2xx": 2782541,
+    "req2xx": 448752,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 6156,
-    "errors": [
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 6148
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 8
-      }
-    ],
+    "others": 0,
     "latency": {
-      "mean": 64550.27350264299,
-      "stddev": 15926.040824541296,
-      "max": 711553,
+      "mean": 268065.9963320498,
+      "stddev": 161839.62840388267,
+      "max": 3280998,
       "percentiles": {
-        "50": 61098,
-        "75": 90854,
-        "90": 102926,
-        "95": 111164,
-        "99": 113623
+        "50": 199969,
+        "75": 460103,
+        "90": 601466,
+        "95": 660913,
+        "99": 2000977
       }
     },
     "rps": {
-      "mean": 15493.427215818603,
-      "stddev": 577.2133165291579,
-      "max": 18032.806182647782,
+      "mean": 3733.536714622365,
+      "stddev": 509.8914154027309,
+      "max": 8157.769459633355,
       "percentiles": {
-        "50": 15539.613322,
-        "75": 15833.851846,
-        "90": 16069.856718,
-        "95": 16221.301001,
-        "99": 16544.60923
+        "50": 3747.900426,
+        "75": 4145.484531,
+        "90": 4392.784851,
+        "95": 4497.133977,
+        "99": 4744.778371
       }
     }
   }

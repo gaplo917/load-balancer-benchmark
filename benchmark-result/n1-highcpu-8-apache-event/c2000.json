@@ -2,56 +2,46 @@
   "spec": {
     "numberOfConnections": 2000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 981632668,
-    "bytesWritten": 552354426,
-    "timeTakenSeconds": 182.122474052,
+    "bytesRead": 202357775,
+    "bytesWritten": 75178656,
+    "timeTakenSeconds": 122.000159267,
     "req1xx": 0,
-    "req2xx": 4343407,
+    "req2xx": 894727,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 388399,
-    "errors": [
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 384384
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 4015
-      }
-    ],
+    "others": 0,
     "latency": {
-      "mean": 76081.08613835817,
-      "stddev": 57525.65713676027,
-      "max": 27905463,
+      "mean": 268755.96360454086,
+      "stddev": 129391.22651679345,
+      "max": 3489820,
       "percentiles": {
-        "50": 71684,
-        "75": 102456,
-        "90": 122735,
-        "95": 142430,
-        "99": 397967
+        "50": 200178,
+        "75": 460197,
+        "90": 601570,
+        "95": 660932,
+        "99": 2000959
       }
     },
     "rps": {
-      "mean": 26295.037575165832,
-      "stddev": 2103.865712968989,
-      "max": 39350.24829190065,
+      "mean": 7444.332200128301,
+      "stddev": 473.45091962437954,
+      "max": 14737.06246511756,
       "percentiles": {
-        "50": 26318.871947,
-        "75": 27394.306006,
-        "90": 28470.994511,
-        "95": 29245.050275,
-        "99": 32513.444309
+        "50": 7497.392032,
+        "75": 7662.551643,
+        "90": 7830.288033,
+        "95": 7902.441064,
+        "99": 8055.845321
       }
     }
   }

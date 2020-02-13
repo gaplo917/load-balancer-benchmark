@@ -2,104 +2,56 @@
   "spec": {
     "numberOfConnections": 16000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 30,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 86881406,
-    "bytesWritten": 47319426,
-    "timeTakenSeconds": 196.976651981,
+    "bytesRead": 128777787,
+    "bytesWritten": 49053816,
+    "timeTakenSeconds": 130.427727301,
     "req1xx": 0,
-    "req2xx": 384414,
+    "req2xx": 569665,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 164147,
+    "others": 1483,
     "errors": [
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
-        "count": 130839
+        "description": "the server closed connection before returning the first response byte. Make sure the server returns 'Connection: close' response header before closing the connection",
+        "count": 809
       },
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 18530
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 12719
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 2046
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 4
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:37274->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:52353->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:55637->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:51914->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:53671->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:52561->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:59311->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:55693->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:42231->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
+        "description": "dial tcp 10.170.0.6:8080: connect: connection timed out",
+        "count": 674
       }
     ],
     "latency": {
-      "mean": 5404611.926190524,
-      "stddev": 5089508.170466194,
-      "max": 38776638,
+      "mean": 1220368.3384551816,
+      "stddev": 7480361.775715586,
+      "max": 130331219,
       "percentiles": {
-        "50": 4148750,
-        "75": 6801147,
-        "90": 8948823,
-        "95": 12165484,
-        "99": 30230208
+        "50": 219948,
+        "75": 481327,
+        "90": 641204,
+        "95": 692144,
+        "99": 37659690
       }
     },
     "rps": {
-      "mean": 5125.043911977281,
-      "stddev": 12960.449130334855,
-      "max": 366300.3663003663,
+      "mean": 18764.708567308622,
+      "stddev": 4530.671263641064,
+      "max": 25694.847985326265,
       "percentiles": {
-        "50": 1852.388752,
-        "75": 4664.993199,
-        "90": 11833.470706,
-        "95": 20896.151983,
-        "99": 55293.023304
+        "50": 19886.705887,
+        "75": 22595.948862,
+        "90": 23334.082656,
+        "95": 23695.124728,
+        "99": 24278.149665
       }
     }
   }

@@ -2,60 +2,46 @@
   "spec": {
     "numberOfConnections": 4000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 1055372916,
-    "bytesWritten": 546064272,
-    "timeTakenSeconds": 192.542014391,
+    "bytesRead": 398014374,
+    "bytesWritten": 147824124,
+    "timeTakenSeconds": 121.997381633,
     "req1xx": 0,
-    "req2xx": 4666125,
+    "req2xx": 1759809,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 1115,
-    "errors": [
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 1091
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 21
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
-        "count": 3
-      }
-    ],
+    "others": 0,
     "latency": {
-      "mean": 154292.0398228932,
-      "stddev": 378408.9709516671,
-      "max": 30067415,
+      "mean": 273166.89154902607,
+      "stddev": 288472.34767439665,
+      "max": 29979774,
       "percentiles": {
-        "50": 136122,
-        "75": 167682,
-        "90": 207955,
-        "95": 251346,
-        "99": 527121
+        "50": 200055,
+        "75": 460081,
+        "90": 601468,
+        "95": 660764,
+        "99": 2000801
       }
     },
     "rps": {
-      "mean": 26150.482171207408,
-      "stddev": 4737.102074073754,
-      "max": 88598.68321397917,
+      "mean": 14653.050856395017,
+      "stddev": 1238.8141524619136,
+      "max": 21114.30916732269,
       "percentiles": {
-        "50": 26439.640944,
-        "75": 27594.832391,
-        "90": 28532.113542,
-        "95": 29209.101556,
-        "99": 44204.149764
+        "50": 14785.43413,
+        "75": 15290.980593,
+        "90": 15664.021649,
+        "95": 15857.546606,
+        "99": 16214.026755
       }
     }
   }

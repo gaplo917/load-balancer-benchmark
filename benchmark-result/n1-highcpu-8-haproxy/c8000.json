@@ -1,0 +1,48 @@
+{
+  "spec": {
+    "numberOfConnections": 8000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "fasthttp"
+  },
+  "result": {
+    "bytesRead": 649591805,
+    "bytesWritten": 301468020,
+    "timeTakenSeconds": 121.999990298,
+    "req1xx": 0,
+    "req2xx": 3588905,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 0,
+    "latency": {
+      "mean": 267954.7603500232,
+      "stddev": 74536.5520564746,
+      "max": 3229697,
+      "percentiles": {
+        "50": 199982,
+        "75": 459856,
+        "90": 601138,
+        "95": 660569,
+        "99": 2000623
+      }
+    },
+    "rps": {
+      "mean": 29900.587410437187,
+      "stddev": 1958.1032131174106,
+      "max": 76698.90319069436,
+      "percentiles": {
+        "50": 30034.520176,
+        "75": 30776.266882,
+        "90": 31447.158749,
+        "95": 31851.428537,
+        "99": 32612.236111
+      }
+    }
+  }
+}

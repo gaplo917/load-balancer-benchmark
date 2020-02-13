@@ -2,60 +2,46 @@
   "spec": {
     "numberOfConnections": 2000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 968280259,
-    "bytesWritten": 500891157,
-    "timeTakenSeconds": 180.569663184,
+    "bytesRead": 194075520,
+    "bytesWritten": 72083592,
+    "timeTakenSeconds": 121.993942723,
     "req1xx": 0,
-    "req2xx": 4280967,
+    "req2xx": 858106,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 155,
-    "errors": [
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 143
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 11
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 1
-      }
-    ],
+    "others": 0,
     "latency": {
-      "mean": 84108.70122248326,
-      "stddev": 273643.8018053162,
-      "max": 30003844,
+      "mean": 280292.8420160213,
+      "stddev": 505544.7562285201,
+      "max": 35512849,
       "percentiles": {
-        "50": 71425,
-        "75": 100954,
-        "90": 116661,
-        "95": 143053,
-        "99": 501094
+        "50": 200335,
+        "75": 460379,
+        "90": 601890,
+        "95": 661057,
+        "99": 2001027
       }
     },
     "rps": {
-      "mean": 23790.689530079835,
-      "stddev": 2116.152754449265,
-      "max": 34677.70046230614,
+      "mean": 7143.657830632542,
+      "stddev": 725.2914056362375,
+      "max": 9761.115470241737,
       "percentiles": {
-        "50": 24241.65481,
-        "75": 24971.467971,
-        "90": 25556.058064,
-        "95": 25896.636166,
-        "99": 26903.757744
+        "50": 7347.47504,
+        "75": 7594.823748,
+        "90": 7755.723724,
+        "95": 7856.624706,
+        "99": 8046.568943
       }
     }
   }

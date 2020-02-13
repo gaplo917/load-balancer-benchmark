@@ -2,76 +2,46 @@
   "spec": {
     "numberOfConnections": 4000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 917794316,
-    "bytesWritten": 514469241,
-    "timeTakenSeconds": 205.379355473,
+    "bytesRead": 403408910,
+    "bytesWritten": 149892456,
+    "timeTakenSeconds": 122.001005318,
     "req1xx": 0,
-    "req2xx": 4060832,
+    "req2xx": 1783683,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
-    "others": 468612,
-    "errors": [
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 377241
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 84448
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 6889
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 31
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:34708->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:38964->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:60788->10.170.0.6:8080: use of closed network connection",
-        "count": 1
-      }
-    ],
+    "others": 0,
     "latency": {
-      "mean": 162661.42905111532,
-      "stddev": 914959.5989558545,
-      "max": 30079616,
+      "mean": 269646.4473558362,
+      "stddev": 113618.8615869512,
+      "max": 5564041,
       "percentiles": {
-        "50": 75278,
-        "75": 110771,
-        "90": 149116,
-        "95": 214882,
-        "99": 599521
+        "50": 200295,
+        "75": 460309,
+        "90": 601688,
+        "95": 660988,
+        "99": 2001031
       }
     },
     "rps": {
-      "mean": 25484.233743939938,
-      "stddev": 7526.416325387906,
-      "max": 127369.5383292836,
+      "mean": 14850.292026615542,
+      "stddev": 972.422452978871,
+      "max": 16733.6712835615,
       "percentiles": {
-        "50": 26160.330955,
-        "75": 27640.943445,
-        "90": 29909.966514,
-        "95": 36952.509601,
-        "99": 48361.253664
+        "50": 14933.899017,
+        "75": 15209.329403,
+        "90": 15450.139051,
+        "95": 15604.064078,
+        "99": 15915.657028
       }
     }
   }

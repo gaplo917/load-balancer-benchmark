@@ -2,128 +2,52 @@
   "spec": {
     "numberOfConnections": 12000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 191716919,
-    "bytesWritten": 101110845,
-    "timeTakenSeconds": 203.648650235,
+    "bytesRead": 459318737,
+    "bytesWritten": 171085572,
+    "timeTakenSeconds": 203.549274626,
     "req1xx": 0,
-    "req2xx": 847974,
+    "req2xx": 2030908,
     "req3xx": 0,
-    "req4xx": 0,
-    "req5xx": 10,
-    "others": 119239,
+    "req4xx": 3,
+    "req5xx": 4,
+    "others": 3576,
     "errors": [
       {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
-        "count": 98817
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
-        "count": 15905
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
-        "count": 3835
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
-        "count": 660
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
-        "count": 7
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:54777->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:54908->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:42008->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:36943->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:42838->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:59119->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:52689->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:42692->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:56979->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:32800->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:44161->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:34870->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:50391->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:40159->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
-      },
-      {
-        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:60693->10.170.0.6:8080: read: connection reset by peer",
-        "count": 1
+        "description": "dial tcp 10.170.0.6:8080: connect: connection timed out",
+        "count": 3576
       }
     ],
     "latency": {
-      "mean": 2252655.611218923,
-      "stddev": 3774537.4639738053,
-      "max": 33334197,
+      "mean": 757326.9493573577,
+      "stddev": 6606132.594865035,
+      "max": 191104086,
       "percentiles": {
-        "50": 1188704,
-        "75": 2987870,
-        "90": 4706146,
-        "95": 5784718,
-        "99": 30046273
+        "50": 241742,
+        "75": 503323,
+        "90": 661837,
+        "95": 824091,
+        "99": 2778512
       }
     },
     "rps": {
-      "mean": 9600.055135241786,
-      "stddev": 13879.54288762146,
-      "max": 351926.7992257611,
+      "mean": 16898.43607828338,
+      "stddev": 4752.588411366061,
+      "max": 38925.22852851957,
       "percentiles": {
-        "50": 4623.254454,
-        "75": 16208.568853,
-        "90": 19595.521444,
-        "95": 29501.723269,
-        "99": 57545.523998
+        "50": 18547.90925,
+        "75": 19968.056102,
+        "90": 21097.411348,
+        "95": 21523.590932,
+        "99": 22231.251274
       }
     }
   }

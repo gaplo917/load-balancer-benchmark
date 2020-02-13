@@ -2,46 +2,46 @@
   "spec": {
     "numberOfConnections": 4000,
     "testType": "timed",
-    "testDurationSeconds": 180,
+    "testDurationSeconds": 120,
     "method": "GET",
     "url": "http://lb.c.tiny-projectsss.internal:8080/io",
     "body": "",
     "stream": false,
     "timeoutSeconds": 30,
-    "client": "net/http.v2"
+    "client": "fasthttp"
   },
   "result": {
-    "bytesRead": 1994727493,
-    "bytesWritten": 911826396,
-    "timeTakenSeconds": 180.493656295,
+    "bytesRead": 458021493,
+    "bytesWritten": 150314472,
+    "timeTakenSeconds": 121.956132584,
     "req1xx": 0,
-    "req2xx": 7793388,
+    "req2xx": 1789458,
     "req3xx": 0,
     "req4xx": 0,
     "req5xx": 0,
     "others": 0,
     "latency": {
-      "mean": 92385.20032096439,
-      "stddev": 28196.280329832214,
-      "max": 1192808,
+      "mean": 268633.3947217537,
+      "stddev": 103488.5324962919,
+      "max": 3645603,
       "percentiles": {
-        "50": 88956,
-        "75": 117362,
-        "90": 133685,
-        "95": 140887,
-        "99": 173365
+        "50": 200209,
+        "75": 460047,
+        "90": 601593,
+        "95": 660955,
+        "99": 2000997
       }
     },
     "rps": {
-      "mean": 43350.42476591572,
-      "stddev": 4469.202291038968,
-      "max": 74451.83607561534,
+      "mean": 14897.789878373314,
+      "stddev": 1720.2492881267765,
+      "max": 20774.816767114902,
       "percentiles": {
-        "50": 43415.464588,
-        "75": 44840.394469,
-        "90": 46168.173837,
-        "95": 47486.467233,
-        "99": 61346.030747
+        "50": 14931.0162,
+        "75": 16281.498186,
+        "90": 17100.532435,
+        "95": 17399.597553,
+        "99": 17771.295376
       }
     }
   }
