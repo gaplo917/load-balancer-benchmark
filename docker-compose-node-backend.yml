@@ -1,82 +1,98 @@
 version: '3'
 services:
   node-backend0: # we don't use docker-compose scale here, because we want to test real-world apache/nginx load balancing under load
+    network_mode: host
+    environment:
+      - PORT=3000
     build:
       context: ./node-backend
-    ports:
-      - 3000:3000
   node-backend1:
+    network_mode: host
+    environment:
+      - PORT=3001
     build:
       context: ./node-backend
-    ports:
-      - 3001:3000
   node-backend2:
+    network_mode: host
+    environment:
+      - PORT=3002
     build:
       context: ./node-backend
-    ports:
-      - 3002:3000
   node-backend3:
+    network_mode: host
+    environment:
+      - PORT=3003
     build:
       context: ./node-backend
-    ports:
-      - 3003:3000
   node-backend4:
+    network_mode: host
+    environment:
+      - PORT=3004
     build:
       context: ./node-backend
-    ports:
-      - 3004:3000
   node-backend5:
+    network_mode: host
+    environment:
+      - PORT=3005
     build:
       context: ./node-backend
-    ports:
-      - 3005:3000
   node-backend6:
+    network_mode: host
+    environment:
+      - PORT=3006
     build:
       context: ./node-backend
-    ports:
-      - 3006:3000
   node-backend7:
+    network_mode: host
+    environment:
+      - PORT=3007
     build:
       context: ./node-backend
-    ports:
-      - 3007:3000
   node-backend8:
+    network_mode: host
+    environment:
+      - PORT=3008
     build:
       context: ./node-backend
-    ports:
-      - 3008:3000
   node-backend9:
+    network_mode: host
+    environment:
+      - PORT=3009
     build:
       context: ./node-backend
-    ports:
-      - 3009:3000
   node-backend10:
+    network_mode: host
+    environment:
+      - PORT=3010
     build:
       context: ./node-backend
-    ports:
-      - 3010:3000
   node-backend11:
+    network_mode: host
+    environment:
+      - PORT=3011
     build:
       context: ./node-backend
-    ports:
-      - 3011:3000
   node-backend12:
+    network_mode: host
+    environment:
+      - PORT=3012
     build:
       context: ./node-backend
-    ports:
-      - 3012:3000
   node-backend13:
+    network_mode: host
+    environment:
+      - PORT=3013
     build:
       context: ./node-backend
-    ports:
-      - 3013:3000
   node-backend14:
+    network_mode: host
+    environment:
+      - PORT=3014
     build:
       context: ./node-backend
-    ports:
-      - 3014:3000
   node-backend15:
+    network_mode: host
+    environment:
+      - PORT=3015
     build:
       context: ./node-backend
-    ports:
-      - 3015:3000

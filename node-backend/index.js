@@ -19,5 +19,8 @@ app.get('/io', function (req, res) {
     counter += 1;
 })
 
-console.log('started express...')
-app.listen(3000)
+const port = process.env.PORT || 3000
+
+console.log('started express on port', port)
+
+app.listen(port)
