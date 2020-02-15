@@ -7,9 +7,7 @@ app.get('/', function (req, res) {
 
 const timeouts = [
     ...(new Array(25).fill(10).map((it, index) => it + (index * 2))), // some request serve with cache (10 - 70ms)
-    ...(new Array(25).fill(200).map((it, index) => it + (index * 20))), // some request need query database 200 - 700 ms
-    2000, // some requests cache miss
-    3000 // some requests require more
+    ...(new Array(25).fill(50).map((it, index) => it + (index * 10))), // some request need query database (50 - 300 ms)
 ]
 const len = timeouts.length
 let counter = 0
