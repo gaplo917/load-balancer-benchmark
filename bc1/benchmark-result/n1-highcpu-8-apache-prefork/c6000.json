@@ -1,0 +1,70 @@
+{
+  "spec": {
+    "numberOfConnections": 6000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 32070078,
+    "bytesWritten": 17034174,
+    "timeTakenSeconds": 140.119535367,
+    "req1xx": 0,
+    "req2xx": 141900,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 17982,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
+        "count": 8708
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 5577
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 3089
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 607
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 4612217.596208454,
+      "stddev": 4542275.909918688,
+      "max": 34019542,
+      "percentiles": {
+        "50": 3883835,
+        "75": 5727086,
+        "90": 7781412,
+        "95": 9459229,
+        "99": 30639812
+      }
+    },
+    "rps": {
+      "mean": 2989.2778725636185,
+      "stddev": 3399.93101761342,
+      "max": 32552.174280572584,
+      "percentiles": {
+        "50": 1992.584795,
+        "75": 4099.704206,
+        "90": 6603.235585,
+        "95": 9515.646201,
+        "99": 16103.788802
+      }
+    }
+  }
+}

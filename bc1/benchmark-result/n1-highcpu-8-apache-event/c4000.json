@@ -1,0 +1,74 @@
+{
+  "spec": {
+    "numberOfConnections": 4000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 236084229,
+    "bytesWritten": 130169520,
+    "timeTakenSeconds": 146.462865718,
+    "req1xx": 0,
+    "req2xx": 1044556,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 217992,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 136103
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 76559
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 5315
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 13
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:37556->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:43290->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 399379.3889119463,
+      "stddev": 1985079.9409872214,
+      "max": 30207184,
+      "percentiles": {
+        "50": 140707,
+        "75": 269448,
+        "90": 416303,
+        "95": 544683,
+        "99": 3633141
+      }
+    },
+    "rps": {
+      "mean": 11798.556841617197,
+      "stddev": 6385.192481402841,
+      "max": 106712.19720414042,
+      "percentiles": {
+        "50": 12077.682237,
+        "75": 14632.064016,
+        "90": 18084.698088,
+        "95": 21872.963241,
+        "99": 31924.965158
+      }
+    }
+  }
+}

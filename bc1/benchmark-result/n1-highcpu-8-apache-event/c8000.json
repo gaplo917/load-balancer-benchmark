@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "numberOfConnections": 8000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 230841733,
+    "bytesWritten": 123698016,
+    "timeTakenSeconds": 145.735461706,
+    "req1xx": 0,
+    "req2xx": 1021270,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 222763,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 165491
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 46976
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 10251
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 22
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
+        "count": 20
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:50751->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:35070->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:54019->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 794760.2493856674,
+      "stddev": 2406925.1797912237,
+      "max": 30347930,
+      "percentiles": {
+        "50": 368136,
+        "75": 716296,
+        "90": 1028563,
+        "95": 1265261,
+        "99": 26359847
+      }
+    },
+    "rps": {
+      "mean": 12325.0810930908,
+      "stddev": 10217.981087965023,
+      "max": 328407.2249589491,
+      "percentiles": {
+        "50": 12452.535336,
+        "75": 15782.107036,
+        "90": 21473.935835,
+        "95": 26235.307738,
+        "99": 35030.203247
+      }
+    }
+  }
+}
