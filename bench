@@ -7,7 +7,7 @@ concurrency=( "${inputs[@]:3}" )
 for value in "${concurrency[@]}"
 do
   json_result="$2/c$value.json"
-
+  echo "running benchmark(c=$value)"
   docker run -ti --rm --ulimit nofile=65535:65535 alpine/bombardier -o json -p result --http1 -c $value -d $3 -t 30s -l $1 | jq '.' > $json_result;
   echo "concurrency=$value, timeTakenSeconds=$(cat $json_result | jq '.result.timeTakenSeconds'), rps=$(cat $json_result | jq '.result.rps.mean')"
 done
