@@ -1,0 +1,58 @@
+{
+  "spec": {
+    "numberOfConnections": 2000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 368084111,
+    "bytesWritten": 190416564,
+    "timeTakenSeconds": 120.321967652,
+    "req1xx": 0,
+    "req2xx": 1627455,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 37,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 35
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 2
+      }
+    ],
+    "latency": {
+      "mean": 147538.26133031683,
+      "stddev": 319444.2230290862,
+      "max": 30000472,
+      "percentiles": {
+        "50": 131737,
+        "75": 205099,
+        "90": 271276,
+        "95": 306926,
+        "99": 377746
+      }
+    },
+    "rps": {
+      "mean": 13661.134611271254,
+      "stddev": 1707.5081668973623,
+      "max": 52880.36890667358,
+      "percentiles": {
+        "50": 13781.340066,
+        "75": 14473.858041,
+        "90": 15220.861943,
+        "95": 15714.479446,
+        "99": 16865.630375
+      }
+    }
+  }
+}

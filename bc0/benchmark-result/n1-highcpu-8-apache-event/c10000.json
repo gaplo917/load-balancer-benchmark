@@ -1,0 +1,114 @@
+{
+  "spec": {
+    "numberOfConnections": 10000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 216893893,
+    "bytesWritten": 115382943,
+    "timeTakenSeconds": 143.088520934,
+    "req1xx": 0,
+    "req2xx": 959568,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 1,
+    "others": 232807,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 176866
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 49055
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 6821
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
+        "count": 53
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:39669->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:46593->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:35240->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:54771->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:36843->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:35127->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:54910->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:41038->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:57363->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:33658->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:52799->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 1014222.7336301636,
+      "stddev": 2145925.8423081706,
+      "max": 30284281,
+      "percentiles": {
+        "50": 674144,
+        "75": 1205821,
+        "90": 1670000,
+        "95": 2072929,
+        "99": 4924621
+      }
+    },
+    "rps": {
+      "mean": 12408.682852000618,
+      "stddev": 9893.95623304969,
+      "max": 236183.27822390178,
+      "percentiles": {
+        "50": 11173.549415,
+        "75": 16600.821711,
+        "90": 24743.259821,
+        "95": 30252.020835,
+        "99": 39391.186222
+      }
+    }
+  }
+}

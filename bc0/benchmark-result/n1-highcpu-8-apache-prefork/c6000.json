@@ -1,0 +1,70 @@
+{
+  "spec": {
+    "numberOfConnections": 6000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 38823862,
+    "bytesWritten": 20486697,
+    "timeTakenSeconds": 141.140984962,
+    "req1xx": 0,
+    "req2xx": 171771,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 20890,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: dial tcp 10.170.0.6:8080: connect: cannot assign requested address",
+        "count": 10883
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 6652
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 2501
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 853
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: read tcp 172.17.0.2:43905->10.170.0.6:8080: read: connection reset by peer",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 3831493.67766699,
+      "stddev": 4365999.804001425,
+      "max": 38281167,
+      "percentiles": {
+        "50": 2743924,
+        "75": 4582146,
+        "90": 7313213,
+        "95": 9514006,
+        "99": 30600227
+      }
+    },
+    "rps": {
+      "mean": 3450.810922217625,
+      "stddev": 4788.8670301050415,
+      "max": 64750.064750064754,
+      "percentiles": {
+        "50": 2050.15694,
+        "75": 4655.243527,
+        "90": 7846.003597,
+        "95": 10851.241483,
+        "99": 26707.57555
+      }
+    }
+  }
+}

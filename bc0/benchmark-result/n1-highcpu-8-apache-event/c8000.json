@@ -1,0 +1,70 @@
+{
+  "spec": {
+    "numberOfConnections": 8000,
+    "testType": "timed",
+    "testDurationSeconds": 120,
+    "method": "GET",
+    "url": "http://lb.c.tiny-projectsss.internal:8080/io",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 30,
+    "client": "net/http.v1"
+  },
+  "result": {
+    "bytesRead": 215597475,
+    "bytesWritten": 115162749,
+    "timeTakenSeconds": 137.182894869,
+    "req1xx": 0,
+    "req2xx": 953814,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 222823,
+    "errors": [
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: http: server closed idle connection",
+        "count": 167960
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: EOF",
+        "count": 48033
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 6818
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 11
+      },
+      {
+        "description": "Get http://lb.c.tiny-projectsss.internal:8080/io: write tcp 172.17.0.2:36229->10.170.0.6:8080: use of closed network connection",
+        "count": 1
+      }
+    ],
+    "latency": {
+      "mean": 823100.5882204962,
+      "stddev": 2056107.9193728545,
+      "max": 30230400,
+      "percentiles": {
+        "50": 501414,
+        "75": 962845,
+        "90": 1328592,
+        "95": 1589262,
+        "99": 4191880
+      }
+    },
+    "rps": {
+      "mean": 11419.467864167998,
+      "stddev": 7498.296001836061,
+      "max": 71650.72468047017,
+      "percentiles": {
+        "50": 10934.734564,
+        "75": 14629.531012,
+        "90": 21384.301192,
+        "95": 26111.189308,
+        "99": 35588.608087
+      }
+    }
+  }
+}
