@@ -1,16 +1,14 @@
 # Load Balancer Benchmark
 
 Two decade ago, multi-core CPU start coming out, software engineers proved that 'process per request' based implementation 
-was consume too much memory and not efficient to scale compared to 'thread per request'.
-Then, we replaced with 'thread per request' based implementation.
+was consume too much memory. Then, we substituted with 'thread per request' based implementation.
 
 The last decade, software engineers proved that 'thread per request' based implementation 
-was not CPU friendly(context switching & job scheduling) and not efficient to scale too.
-Then, we replaced with event-loop based implementation.
+was not CPU friendly(context switching & job scheduling).Then, we substituted with event-loop based implementation.
 
 > I know it theoretically. But, I still have some questions and I can't google any answers.
 
-* How 'bad' are bad?
+* How 'bads' are bad?
 
 * Is Apache Httpd shouldn't be recommended in all scenarios?
 
@@ -22,9 +20,9 @@ The only way to answer those questions is to do it by myself.
 ## Apahce vs Nginx vs Haproxy vs Traefik
 
 Benchmark machine:
-Load Balancer: n1-high-cpu (8 vCPU, 8GB RAM)
-Backend: custom(24 vCPU, 21GB RAM) 
-Benchmark Client: custom x 2 (24 vCPU)
+* Load Balancer: n1-high-cpu (8 vCPU, 8GB RAM)
+* Backend: custom(24 vCPU, 21GB RAM) 
+* Benchmark Client: custom x 2 (24 vCPU)
 
 This benchmark 
 
