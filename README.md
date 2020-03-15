@@ -1,4 +1,5 @@
 # Load Balancer Benchmark
+(TLDR; [Check Benchmark Result](#benchmark-result))
 
 Two decade ago, multi-core CPU start coming out, software engineers proved that 'process per request' based implementation 
 was consume too much memory. Then, we substituted with 'thread per request' based implementation.
